@@ -1,12 +1,10 @@
-import { Component, signal } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { Component } from '@angular/core';
+import { CoreLayout } from './core/layouts/core/core-layout';
 
 @Component({
-  imports: [RouterOutlet],
+  imports: [CoreLayout],
   selector: 'app-root',
   styleUrl: './app.scss',
   templateUrl: './app.html',
 })
-export class App {
-  protected readonly title = signal('CajitasApp');
-}
+export class App { }

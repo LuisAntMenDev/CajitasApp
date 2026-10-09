@@ -1,0 +1,9 @@
+@for (saving of savingsList(); track saving.id) {
+<saving-item [saving]="saving" (delete)="deleteItem(saving.id)"></saving-item>
+} @empty {
+<mat-card class="empty-savings">
+    <mat-card-content>
+        <span>No tienes ahorros creados. Añade uno con en el botón de la parte inferior derecha.</span>
+    </mat-card-content>
+</mat-card>
+}

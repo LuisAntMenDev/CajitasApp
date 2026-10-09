@@ -1,0 +1,19 @@
+<mat-card appearance="filled">
+    <mat-card-header>
+        <mat-card-title>{{saving().name}}</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+        <span>Cantidad ahorrada: {{saving().quantity | currency}}</span>
+    </mat-card-content>
+    <mat-card-actions>
+        <!-- <button matMiniFab aria-label="Edit this saving." class="btn-secondary">
+            <mat-icon>edit</mat-icon>
+        </button> -->
+        <button matMiniFab aria-label="Edit this saving." class="btn-error" [disabled]="isDeleting()"
+            [showProgress]="isDeleting()" (click)="deleteSaving()">
+            <mat-icon>delete</mat-icon>
+            <mat-progress-spinner progressIndicator mode="indeterminate" diameter="20" aria-label="Cargando"
+                tabindex="" />
+        </button>
+    </mat-card-actions>
+</mat-card>
